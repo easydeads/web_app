@@ -9,12 +9,10 @@ class Profile(models.Model):
     nickname = models.CharField(max_length=124, unique=True, default=login)
 
     def __str__(self):
-        return f'nickname - {self.nickname}, id - {self.id}'
+        return f'nickname - {self.nickname}, passkey - {self.password}, login - {self.login}, id - {self.id}'
 
     def profiles_list(self):
         pass
 
     def get_name(self):
         return self.nickname
-
-
